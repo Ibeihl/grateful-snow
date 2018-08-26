@@ -13,27 +13,17 @@ class AddLocation extends React.Component {
     render() {
         return (
             <form className="add-location" onSubmit={e => this.handleSubmit(e)}>
+                <fieldset>
+                    <legend>Add a location!</legend>
                 <label htmlFor="city">Enter City and State</label>
                 <input type="text" name="city" placeholder="sun valley" />
                 <label htmlFor="state">Enter State</label>
                 <input type="text" name="state" placeholder="id" />
                 <button type="submit">Add Location</button>
+                </fieldset>
             </form>
         );
     }
 }
 
 export default AddLocation;
-
-
-{/* <form className="search-bar" onSubmit={e => this.handleSubmit(e)}>
-    <fieldset>
-        <legend>Choose your Ski Area</legend>
-        <h2>Enter the closest city and state!</h2>
-        <label htmlFor="city">Enter City and State</label>
-        <input type="text" name="city" placeholder="jackson" />
-        <label htmlFor="state">Enter State</label>
-        <input type="text" name="state" placeholder="wy" />
-        <button type="submit" >Get Snow Report</button>
-    </fieldset>
-</form> */}
