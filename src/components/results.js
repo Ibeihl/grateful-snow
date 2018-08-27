@@ -2,7 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Results extends React.Component {
-    render() {
+    componentDidUpdate() {
+        console.log(this.props.loading);
+        this.renderResults();
+    }
+    renderResults() {
         let loadMessage;
         let errorMessage;
         let reportElements;
@@ -12,10 +16,9 @@ class Results extends React.Component {
         if (this.props.error) {
             errorMessage = <h3>couldnt find any reports</h3>
         }
-        if (this.props.reports !== []) {
-            let reports = this.props.reports;
-            reportElements = reports.map(report =>{
-                return (
+        if (this.props.report !== null) {
+            let report = this.props.report;
+            reportElements = 
                     <div className="report-element" key={report.data.nearest_area[0].areaName[0].value}>
                     <h3>{report.data.nearest_area[0].areaName[0].value}</h3>
                     <ul>
@@ -26,10 +29,8 @@ class Results extends React.Component {
                         <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
                         <li></li>
                     </ul>
-                </div>
-                )
-            })
-        }
+                </div>   
+            }
 
         return (
             <div className="results">
@@ -39,12 +40,16 @@ class Results extends React.Component {
             </div>
         );
     }
+    
+    render() {
+        return this.renderResults();
+    }
 }
 
 const mapStateToProps = state => ({
     error: state.report.error,
     loading: state.report.loading,
-    reports: state.report.reports
+    report: state.report.searchReport
 })
 
 export default connect(mapStateToProps)(Results);

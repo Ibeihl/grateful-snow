@@ -7,6 +7,7 @@ import {
 const initialState = {
     loading: false,
     error: null,
+    searchReport: null,
     reports: []
 };
 
@@ -23,7 +24,8 @@ export function reportReducer(state = initialState, action) {
     }
     if (action.type === GET_REPORT_SUCCESS) {
         return Object.assign({}, state, {
-            reports: [...state.reports, action.report]
+            searchReport: action.searchReport,
+            loading: false
         })
     }
     return state;

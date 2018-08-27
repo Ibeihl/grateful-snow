@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getReport } from './actions/get-report';
+import { getReport } from '../actions/get-report';
 import Results from './results';
 
 export class SearchBar extends React.Component {
