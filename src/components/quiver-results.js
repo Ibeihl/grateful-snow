@@ -1,24 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import FollowButton from './follow-button';
+import { getQuiverReport } from '../actions/get-quiver-reports';
 
-class Results extends React.Component {
-    componentDidUpdate() {
-        this.renderResults();
+class QuiverResults extends React.Component {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.skiAreas.length !== this.props.skiAreas.length){
+            this.props.dispatch(getQuiverReport(this.props.skiAreas))
+        }
     }
-    renderResults() {
-        let loadMessage;
+    
+    renderResults(){
         let errorMessage;
+        let loadingMessage;
         let reportElements;
-        if (this.props.loading === true) {
-            loadMessage = <h3>loading.....</h3>
+        if (this.props.loading) {
+            loadingMessage = <h3>Loading your ski areas...</h3>
         }
         if (this.props.error) {
             errorMessage = <h3>couldnt find any reports</h3>
         }
-        if (this.props.report !== null) {
-            let report = this.props.report;
-            reportElements = 
+        if (this.props.quiverReports[0] !== undefined) {
+            reportElements = this.props.quiverReports[0].map(report => 
                     <div className="report-element"
                          id={report.data.request[0].query}
                          key={report.data.nearest_area[0].areaName[0].value}>
@@ -31,29 +33,30 @@ class Results extends React.Component {
                         <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
                         <li>POOP</li>
                     </ul>
-                    <FollowButton/>
                 </div>   
-            }
+           )
+        }
 
         return (
-            <div className="results">
-                {loadMessage}
+            <div className="quiver-results">
+                {loadingMessage}
                 {errorMessage}
                 {reportElements}
             </div>
         );
     }
-    
+
     render() {
         return this.renderResults();
     }
 }
 
 const mapStateToProps = state => ({
-    error: state.report.error,
-    loading: state.report.loading,
-    report: state.report.searchReport
+    error: state.report.quiverError,
+    loading: state.report.quiverLoading,
+    quiverReports: state.report.quiverReports,
+    skiAreas: state.report.skiAreas
 })
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps)(QuiverResults);
 

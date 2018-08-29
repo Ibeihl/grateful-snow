@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getReport } from '../actions/get-report';
 import Results from './results';
+import './search-bar.css';
 
 export class SearchBar extends React.Component {
     handleSubmit(e) {
@@ -14,8 +15,8 @@ export class SearchBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <form className="search-bar" onSubmit={e => this.handleSubmit(e)}>
+            <div className="search-bar">
+                <form className="search-bar-form" onSubmit={e => this.handleSubmit(e)}>
                     <fieldset>
                         <legend>Choose your Ski Area</legend>
                         <h2>Enter the closest city and state!</h2>

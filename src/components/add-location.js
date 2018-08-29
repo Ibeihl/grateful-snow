@@ -14,7 +14,7 @@ class AddLocation extends React.Component {
         return (
             <form className="add-location" onSubmit={e => this.handleSubmit(e)}>
                 <fieldset>
-                    <legend>Add a location!</legend>
+                    <legend>Find a ski area to follow!</legend>
                 <label htmlFor="city">Enter City and State</label>
                 <input type="text" name="city" placeholder="sun valley" />
                 <label htmlFor="state">Enter State</label>

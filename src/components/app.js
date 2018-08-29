@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './header';
 import Main  from './main';
 import RegistrationPage from './registration-page';
@@ -7,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {refreshAuthToken} from '../actions/auth';
 import {connect} from 'react-redux';
 import {storeAuthInfo} from '../actions/auth';
-import {loadAuthToken} from './local-storage';
+import {loadAuthToken} from '../local-storage';
 
 export class App extends React.Component {
   componentDidMount(){
