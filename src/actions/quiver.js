@@ -37,11 +37,6 @@ export const getQuiver = () => (dispatch, getState) => {
 
 //-------add a skiArea to the quiver------------// 
 
-//should be a pust request to the quiuver endpoint
-//---could use this for add/remove then add logic
-//---to the endpoint to determine whether to add or
-//---remove skiArea from the user's array
-
 export const addSkiArea = skiAreaReq => (dispatch, getState) => {
     const token = getState().auth.authToken;
     const username = getState().auth.currentUser.username;
@@ -57,6 +52,9 @@ export const addSkiArea = skiAreaReq => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
+        .then(() => {
+            dispatch(getQuiver());
+        })
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
