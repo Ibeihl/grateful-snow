@@ -40,7 +40,6 @@ export const getQuiver = () => (dispatch, getState) => {
 export const addSkiArea = skiAreaReq => (dispatch, getState) => {
     const token = getState().auth.authToken;
     const username = getState().auth.currentUser.username;
-    console.log(skiAreaReq)
     fetch(`${API_BASE_URL}/quiver/${username}`, {
         method: 'PUT',
         headers: {

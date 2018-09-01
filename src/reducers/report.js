@@ -38,7 +38,7 @@ export function reportReducer(state = initialState, action) {
     }
     if (action.type === GET_QUIVER_REPORT_SUCCESS) {
         return Object.assign({}, state, {
-            quiverReports: [...state.quiverReports, action.quiverReport],
+            quiverReports: action.quiverReport,
             quiverLoading: false
         })
     }

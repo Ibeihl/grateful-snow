@@ -1,4 +1,27 @@
 .quiver {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 50px;
+    background-color: gainsboro
+    /* border: solid black 1px; */
+}
+
+.quiver h3 {
+    text-align: center;
+}
+
+.quiver h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    background-color: darkgrey;
+}
+
+.quiver ul {
+    list-style-type: none;
+    /* padding-left: 0; */
+}
+.quiver .card {
     margin: 25px;
-    border: solid black 1px;
 }

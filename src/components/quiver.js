@@ -19,23 +19,9 @@ export class Quiver extends React.Component {
     }
     
     render() {
-        // console.log(this.props.skiAreas)
-        let skiAreaElements;
-        if(this.props.skiAreas !== []){
-            skiAreaElements = this.props.skiAreas.map(skiArea => (
-                <div className="skiArea-element" key={skiArea} id={skiArea}>
-                    <h3>{skiArea}</h3>
-                    <button className="remove-from-quiver"
-                            onClick={e => this.handleRemoveFromQuiver(e)}
-                    >Remove from Quiver</button>
-                </div>
-            ))
-        }
-
         return (
             <div className="quiver">
-                <h2>Your Ski Area Quiver</h2>
-                {skiAreaElements}
+                <h2>Your Snow Reports</h2>
                 <QuiverResults/>
             </div>
         )

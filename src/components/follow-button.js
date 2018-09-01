@@ -6,15 +6,18 @@ class FollowButton extends React.Component {
     handleFollow(e) {
         let skiAreaReq = {
             "skiArea": e.target.parentElement.id,
-            "action": "add"
+            "action": "add",
+            "title": e.target.id
         };
-        // const skiArea = e.target.parentElement.id;
         this.props.dispatch(addSkiArea(skiAreaReq))
     }
   
     render() {
     return (
-        <button onClick={(e) => this.handleFollow(e)}>Follow this ski area!!</button>
+        <button id={this.props.id} 
+                onClick={(e) => this.handleFollow(e)}
+                className="btn btn-outline-secondary btn-lg btn-block">
+                Follow this ski area!!</button>
     );
   }
 }

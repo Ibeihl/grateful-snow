@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header';
+// import Header from './header';
 import Main  from './main';
 import RegistrationPage from './registration-page';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -7,6 +7,7 @@ import {refreshAuthToken} from '../actions/auth';
 import {connect} from 'react-redux';
 import {storeAuthInfo} from '../actions/auth';
 import {loadAuthToken} from '../local-storage';
+import Footer from './footer';
 
 export class App extends React.Component {
   componentDidMount(){
@@ -51,11 +52,12 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          < Header />
+          {/* < Header /> */}
           <main>           
             <Route exact path='/' component={Main} />
             <Route path='/login' component={RegistrationPage} />
           </main>
+          <Footer/>
         </div>
        </Router>
     );

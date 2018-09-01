@@ -1,3 +1,17 @@
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 .search-bar {
-    margin: 25px;
+    text-align: center;
+}
+.search-bar ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+.search-bar .card {
+    margin-left: auto;
+    margin-right: auto;
 }

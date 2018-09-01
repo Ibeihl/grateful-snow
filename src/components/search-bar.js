@@ -16,16 +16,23 @@ export class SearchBar extends React.Component {
     render() {
         return (
             <div className="search-bar">
-                <form className="search-bar-form" onSubmit={e => this.handleSubmit(e)}>
-                    <fieldset>
-                        <legend>Choose your Ski Area</legend>
-                        <h2>Enter the closest city and state!</h2>
-                        <label htmlFor="city">Enter City and State</label>
-                        <input type="text" name="city" placeholder="jackson" />
-                        <label htmlFor="state">Enter State</label>
-                        <input type="text" name="state" placeholder="wy" />
-                        <button type="submit" >Get Snow Report</button>
-                    </fieldset>
+                <h2>Find a Ski Area!</h2>
+                <form className="form" onSubmit={e => this.handleSubmit(e)}>
+                    <div className="form-group row">
+                        <div className="col-sm-2">
+                        </div>
+                        <div className="col-sm-4">
+                            <label className="sr-only" htmlFor="city">City</label>
+                            <input type="text" className="form-control mb-2 mr-sm-2" id="city" placeholder="Sun Valley" />
+                        </div>
+                        <div className="col-sm-2">
+                            <label className="sr-only" htmlFor="state">State</label>
+                            <input type="text" className="form-control" id="state" placeholder="id" />
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="submit" className="btn btn-secondary mb-2">Get Snow Report</button>
+                        </div>
+                    </div>
                 </form>
                 <Results/>
             </div>

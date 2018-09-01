@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import LoginForm from './login';
 import RegistrationForm from './register';
+import { Jumbotron } from './jumbotron';
 
 export function RegistrationPage(props) {
     // If we are logged in (which happens automatically when registration
@@ -12,6 +13,7 @@ export function RegistrationPage(props) {
     }
     return (
         <div className="home">
+            <Jumbotron />
             <RegistrationForm />
             <LoginForm />
         </div>

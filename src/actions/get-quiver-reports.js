@@ -19,7 +19,7 @@ export const getQuiverReportRequest = () => ({
 
 export const getQuiverReport = location => (dispatch) => {
     let results = [];
-    let counter = 0
+    let counter = 0;
     dispatch(getQuiverReportRequest());
     for(let i = 0; i < location.length; i++) {
         fetch(`${SNOW_API_BASE_URL}q=${location[i]}&format=json&includeLocation=yes`, {
@@ -31,6 +31,7 @@ export const getQuiverReport = location => (dispatch) => {
           .then(() => {
             if(counter === location.length - 1){
                 dispatch(getQuiverReportSuccess(results))
+                console.log('successfully rendered empty results', results)
             }  
             counter++;
           })
