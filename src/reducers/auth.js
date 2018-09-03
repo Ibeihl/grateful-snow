@@ -6,15 +6,22 @@ import {
     AUTH_ERROR
 } from '../actions/auth';
 
+import { TOGGLE_REGISTRATION_FORM } from '../actions/toggle-registration';
+
 const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
     currentUser: null,
     loading: false,
-    error: null
+    error: null,
+    displayRegistration: false
 };
 
 export default function reducer(state = initialState, action) {
-    if (action.type === SET_AUTH_TOKEN) {
+    if (action.type === TOGGLE_REGISTRATION_FORM) {
+        return Object.assign({}, state, {
+            displayRegistration: !state.displayRegistration
+        });
+    } else if (action.type === SET_AUTH_TOKEN) {
         return Object.assign({}, state, {
             authToken: action.authToken
         });

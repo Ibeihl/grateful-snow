@@ -1,0 +1,22 @@
+form {
+    margin: 25px;
+}
+.card {
+    margin: 20px;
+    width: 350px;
+}
+.register-btn {
+    margin-top: 25px;
+}
+.form-error {
+    color: red;
+    font-weight: bolder;
+}
+.card-header legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+label {
+    font-size: 20px;
+}

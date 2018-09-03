@@ -23,6 +23,7 @@ class QuiverResults extends React.Component {
             errorMessage = <h3>couldnt find any reports</h3>
         }
         if (this.props.quiverReports !== undefined) {
+            console.log(this.props.skiAreas)
             console.log(this.props.quiverReports);
             reportElements = this.props.quiverReports.map(report => 
                 // <div className="report-element"
