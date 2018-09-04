@@ -9,8 +9,8 @@ to be added..
 After a user creates a account, they can easily search for ski areas in the US by entering a city and state.  Users, can then add and remove ski areas from their profile.  When added, the daily ski reports display on the users profile, making it easy to find, add, remove and view ski reports.
 
 ## Screenshots
-### Register and Login
-![screen shot 2018-08-17 at 2 04 11 pm](https://user-images.githubusercontent.com/38081935/44288820-7d554f80-a226-11e8-9897-12ce8c84da9b.png)
+### Main Page
+![snow-problems](https://user-images.githubusercontent.com/38081935/45006047-d570ad80-afab-11e8-9040-09e403c9972d.jpg)
 
 ## Target Audience
 Winter sport enthusiasts that who want an easy way to view snow reports from different places easily. 
