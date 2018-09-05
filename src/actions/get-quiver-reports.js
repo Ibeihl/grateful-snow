@@ -1,4 +1,4 @@
-const SNOW_API_BASE_URL = "http://api.worldweatheronline.com/premium/v1/ski.ashx?key=3cfb71ee64f2468ca7c211859182408&";
+const SNOW_API_BASE_URL = "https://api.worldweatheronline.com/premium/v1/ski.ashx?key=3cfb71ee64f2468ca7c211859182408&";
 
 export const GET_QUIVER_REPORT_SUCCESS = 'GET_QUIVER_REPORT_SUCCESS';
 export const getQuiverReportSuccess = quiverReport => ({
