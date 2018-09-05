@@ -1,9 +1,16 @@
 form {
     margin: 25px;
 }
+input {
+    background-color: #dddddd;
+}
 .card {
-    margin: 20px;
+    margin: 70px;
     width: 350px;
+    background-color: #c6dbe7;
+}
+.card-header {
+    background-color: 	#97afb4
 }
 .register-btn {
     margin-top: 25px;
@@ -19,4 +26,16 @@ form {
 }
 label {
     font-size: 20px;
+}
+.jumbotron {
+    background-image: url(../images/tetons.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 400px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.home {
+    background-color: #dddddd;
+    padding-bottom: 500px;
 }

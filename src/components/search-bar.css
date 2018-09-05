@@ -6,6 +6,23 @@ form {
 }
 .search-bar {
     text-align: center;
+    background-color: #97afb4;
+    padding: 20px;
+}
+.search-bar label {
+    font-size: 20px;
+}
+.search-bar input {
+    background-color: #dddddd;
+    font-size: 20px
+}
+.search-bar button {
+    font-size: 20px;
+    color: #dddddd;
+}
+.search-bar select {
+    background-color: #dddddd;
+    font-size: 20px;
 }
 .search-bar ul {
     list-style-type: none;

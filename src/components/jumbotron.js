@@ -12,7 +12,7 @@ export class Jumbotron extends React.Component {
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
                 <h1 className="display-4">The Grateful Snow</h1>
-                <p className="lead">Handpick your favorite ski areas and have all your
+                <p className="lead">handpick your favorite ski areas and have all your
                     daily snow reports in one place</p>
             </div>
         </div>
