@@ -57,7 +57,7 @@ export class LoginForm extends React.Component {
                     <div className="register-btn">
                         <button
                             onClick={() => this.toggleRegistration()}
-                            className="btn btn-outline-secondary btn-lg">Not a member yet? Create an Account</button>
+                            className="btn btn-outline-secondary btn-lg">Not a member? Create an Account</button>
                     </div>
                 </form>
             </div>

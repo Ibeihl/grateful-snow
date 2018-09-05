@@ -205,7 +205,7 @@ class StateDropdown extends React.Component {
             }
         ];
         let stateOptions = states.map(state => 
-            <option value={state.abr}>{state.name}</option>
+            <option key={state.abr} value={state.abr}>{state.name}</option>
         ) 
         return (
             <div className="form-group states">

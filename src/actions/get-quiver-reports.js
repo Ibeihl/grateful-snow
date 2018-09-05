@@ -31,7 +31,7 @@ export const getQuiverReport = location => (dispatch) => {
           .then(() => {
             if(counter === location.length - 1){
                 dispatch(getQuiverReportSuccess(results))
-                console.log('successfully rendered empty results', results)
+                // console.log('successfully rendered empty results', results)
             }  
             counter++;
           })

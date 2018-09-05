@@ -5,8 +5,9 @@ input {
     background-color: #dddddd;
 }
 .card {
-    margin: 70px;
-    width: 350px;
+    display: block;
+    /* margin: 70px; */
+    /* width: 50vh; */
     background-color: #c6dbe7;
 }
 .card-header {
@@ -29,13 +30,30 @@ label {
 }
 .jumbotron {
     background-image: url(../images/tetons.jpg);
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 400px;
+    background-size: cover;
+    height: 40vh;
     margin-bottom: 0px;
     font-weight: bold;
 }
+.jumbotron h1 {
+    font-size: 80px;
+}
+.jumbotron p {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron p {
+        color: #dddddd;
+    }
+    .jumbotron h1 {
+        color: #dddddd;
+    }
+} 
+
 .home {
     background-color: #dddddd;
-    padding-bottom: 500px;
+    height: 100vh;
 }
