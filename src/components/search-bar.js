@@ -70,7 +70,8 @@ export class SearchBar extends React.Component {
 const mapStateToProps = state => ({
     error: state.report.error,
     loading: state.report.loading,
-    reports: state.report.reports
+    reports: state.report.reports,
+    skiAreas: state.report.skiAreas
 })
 
 export default connect(mapStateToProps)(SearchBar);

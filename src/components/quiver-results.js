@@ -26,21 +26,6 @@ class QuiverResults extends React.Component {
             console.log(this.props.skiAreas)
             console.log(this.props.quiverReports);
             reportElements = this.props.quiverReports.map(report => 
-                // <div className="report-element"
-                //     id={report.data.request[0].query}
-                //     key={report.data.nearest_area[0].areaName[0].value}>
-                //     <h3>{report.data.nearest_area[0].areaName[0].value}</h3>
-                //     <ul>
-                //         <li>Total Snowfall: {report.data.weather[0].totalSnowfall_cm}</li>
-                //         <li>Chance of Snow: {report.data.weather[0].chanceofsnow}%</li>
-                //         <li>Low Elevation High: {report.data.weather[0].bottom[0].maxtempF}F</li>
-                //         <li>Mid Elevation High: {report.data.weather[0].mid[0].maxtempF}F</li>
-                //         <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
-                //         <li>POOP</li>
-                //     </ul>
-                //     <UnfollowButton id={report.data.request[0].query} />
-                // </div>
-
                 <div className="card quiver-report-element"
                     id={report.data.request[0].query}
                     key={report.data.nearest_area[0].areaName[0].value}>
@@ -54,7 +39,6 @@ class QuiverResults extends React.Component {
                             <li>Low Elevation High: {report.data.weather[0].bottom[0].maxtempF}F</li>
                             <li>Mid Elevation High: {report.data.weather[0].mid[0].maxtempF}F</li>
                             <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
-                            <li>POOP</li>
                         </ul>
                         <UnfollowButton id={report.data.request[0].query} />
                     </div>

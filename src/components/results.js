@@ -16,24 +16,9 @@ class Results extends React.Component {
         if (this.props.error) {
             errorMessage = <h3>couldnt find any reports</h3>
         }
-        if (this.props.report !== null) {
+        if (this.props.report !== null && !this.props.report.data.error) {
             let report = this.props.report;
             reportElements =
-                // <div className="report-element"
-                //     id={report.data.request[0].query}
-                //     name={report.data.nearest_area[0].areaName[0].value}
-                //     key={report.data.nearest_area[0].areaName[0].value}>
-                //     <h3>{report.data.nearest_area[0].areaName[0].value}</h3>
-                //     <ul>
-                //         <li>Total Snowfall: {report.data.weather[0].totalSnowfall_cm}</li>
-                //         <li>Chance of Snow: {report.data.weather[0].chanceofsnow}%</li>
-                //         <li>Low Elevation High: {report.data.weather[0].bottom[0].maxtempF}F</li>
-                //         <li>Mid Elevation High: {report.data.weather[0].mid[0].maxtempF}F</li>
-                //         <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
-                //         <li>POOP</li>
-                //     </ul>
-                //     <FollowButton id={report.data.nearest_area[0].areaName[0].value} />
-                // </div>
                 <div className="card report-element"
                 id={report.data.request[0].query}
                 name={report.data.nearest_area[0].areaName[0].value}
@@ -48,15 +33,20 @@ class Results extends React.Component {
                         <li>Low Elevation High: {report.data.weather[0].bottom[0].maxtempF}F</li>
                         <li>Mid Elevation High: {report.data.weather[0].mid[0].maxtempF}F</li>
                         <li>High Elevation High: {report.data.weather[0].top[0].maxtempF}F</li>
-                        <li>POOP</li>
                     </ul>
                     <FollowButton id={report.data.request[0].query} />
                 </div>
             </div>
         }
+        if (this.props.report != null && this.props.report.data.error){
+            reportElements = 
+                <div className="no-results">
+                    <h3>Couldn't find a ski area near there, try another location</h3>
+                </div>
+        }
 
         return (
-            <div className="results">
+            <div className="results card-deck">
                 {loadMessage}
                 {errorMessage}
                 {reportElements}
