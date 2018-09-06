@@ -16,6 +16,7 @@ After a user creates a account, they can easily search for ski areas in the US b
 ![screen shot 2018-09-05 at 8 05 39 pm](https://user-images.githubusercontent.com/38081935/45132794-210b8e80-b147-11e8-9926-eb0adfeaa844.png)
 
 ### Registration
+![screen shot 2018-09-05 at 8 05 50 pm](https://user-images.githubusercontent.com/38081935/45132813-3d0f3000-b147-11e8-923b-7415c67a9946.png)
 
 ## Target Audience
 Winter sport enthusiasts that who want an easy way to view snow reports from different places easily. 
