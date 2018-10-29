@@ -1,5 +1,5 @@
 // import {API_BASE_URL} from '../config';
-const SNOW_API_BASE_URL = "https://api.worldweatheronline.com/premium/v1/ski.ashx?key=3cfb71ee64f2468ca7c211859182408&";
+const SNOW_API_BASE_URL = "https://api.worldweatheronline.com/premium/v1/ski.ashx?key=1424100561214751b65202509182910&";
 
 export const GET_REPORT_REQUEST = 'GET_REPORT_REQUEST';
 export const getReportRequest = () => ({
